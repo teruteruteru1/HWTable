@@ -47,11 +47,7 @@ class FirstViewController: UIViewController ,UITableViewDelegate ,UITableViewDat
         selectedIndex = indexPath.row
         performSegue(withIdentifier: "pages", sender: nil)
     }
-    private func tableView1(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath,"だよ")
-        selectedIndex = indexPath.row
-        performSegue(withIdentifier: "segueko", sender: nil)
-    }
+
     //    戻ってきた時に発動する関数を先に書いて
     //    storybardでbuttonからFirstViewControllerのExitへつなぐことで戻れる
     @IBAction func exitview(_sender: UIButton) {

@@ -44,6 +44,11 @@ class DetailViewController1: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("遷移する直前")
         print(segue.identifier!)
+        
+        let dvc:DetailViewController2 = segue.destination as! DetailViewController2
+        
+        // 次の画面のプロパティ passedIndexに選択された行番号を渡す
+        dvc.passedIndex = self.passedIndex
     }
     
     override func didReceiveMemoryWarning() {
